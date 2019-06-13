@@ -10,7 +10,6 @@ class Main2 extends React.Component {
         this.state = {
             profile: [],
             id: 16,
-            isEditing: false
         }
     }
 
@@ -30,14 +29,6 @@ class Main2 extends React.Component {
         tempArr = this.state.profile.filter(el => el.id !== id);
         this.setState({ profile: tempArr });
         // console.log(tempArr);
-    }
-
-    editPhoto = () => {
-        console.log('edit');
-        axios.post(`http://jsonplaceholder.typicode.com/photos/${this.state.id}`)
-        this.setState({
-            isEditing: true
-        });
     }
 
     componentDidMount() {

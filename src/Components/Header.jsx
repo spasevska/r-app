@@ -35,7 +35,7 @@ class Header extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className='col-md-7'>
+                        <div className='col-xs-7 col-sx-7 col-md-7 col-lg-7'>
                             <div className={this.state.open ? 'overlay open' : 'overlay'}>
                                 <nav className='right overlay-menu'>
                                     <ul>

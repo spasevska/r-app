@@ -55,8 +55,8 @@ class PhotoDetal extends React.Component {
                             </div>
                         </div>
                         <Link to="/">
-                            <div className="col-md-4 photo-detal-icon">
-                                <div>
+                            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 photo-detal-icon">
+                                <div className='mobile-hidden'>
                                     <i className="fas fa-arrow-left" />
                                 </div>
                                 <div className='Like'>
@@ -65,6 +65,9 @@ class PhotoDetal extends React.Component {
                                             this.state.like ? 'You like this photo' : ''
                                         }
                                     </h5>
+                                </div>
+                                <div className='t-d-hidden'>
+                                    <i className="fas fa-arrow-left" />
                                 </div>
                             </div>
                         </Link>
