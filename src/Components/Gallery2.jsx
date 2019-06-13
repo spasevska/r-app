@@ -7,14 +7,13 @@ class Gallery extends React.Component {
 
         this.state = {
             isEditMode: false,
-            title: props.title
         };
     }
 
     editGallery = () => {
         this.setState({
             isEditMode: !this.state.isEditMode
-        })
+        });
     };
 
     changeEditMode = () => {
@@ -25,10 +24,10 @@ class Gallery extends React.Component {
     };
 
     updateValue = () => {
-        console.log('update');
+        console.log("update");
         this.setState({
             isEditMode: false,
-            title: this.refs.theTextInput.value
+            title: this.refs.theTextInput.value,
         });
     };
 
@@ -41,9 +40,6 @@ class Gallery extends React.Component {
         return (
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center photo-icon">
                 <div style={styleCard}>
-                    {/* <div>
-                        <i onClick={this.clickEdit} className='fas fa-plus' />
-                    </div> */}
                     <Link to={`/PhotoDetal/${id}`}>
                         <div
                             className="bg-image"
@@ -57,10 +53,18 @@ class Gallery extends React.Component {
                     {this.state.isEditMode ? (
                         <div>
                             <div>
-                                <input className="inputEdit" type="text" defaultValue={title} ref='theTextInput' />
+                                <input
+                                    className="inputEdit"
+                                    type="text"
+                                    defaultValue={title}
+                                    ref="theTextInput"
+                                />
                             </div>
                             <div className="icon">
-                                <span onClick={this.updateValue} className="styleEdit edit">
+                                <span
+                                    onClick={this.updateValue}
+                                    className="styleEdit edit"
+                                >
                                     <i className="fas fa-check" />
                                 </span>
                                 <span
@@ -103,8 +107,7 @@ const styleCard = {
 };
 
 const styleTitle = {
-    // maxHeight: '14px',
-    height: "28px",
+    height: "31px",
     overflow: "hidden",
     width: "80%",
     margin: "0 auto",
