@@ -22,9 +22,6 @@ class Main extends React.Component {
             })
     }
 
-    // inmjutable - ne menuva
-    // mjutable - menuva
-
     componentDidMount() {
         Axios(`http://jsonplaceholder.typicode.com/photos/${this.state.id}`)
             .then((res) => {
